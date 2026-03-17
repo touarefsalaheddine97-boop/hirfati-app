@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل كحرفي - حِرفتي</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .back-btn {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: inline-block;
+            margin-bottom: 20px;
+            background: rgba(255,255,255,0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+        .form-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+        }
+        .form-card h1 {
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .form-card p {
+            color: #6b7280;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            color: #374151;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d97706;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: #d97706;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+        .success-message {
+            display: none;
+            background: #10b981;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← رجوع للرئيسية</a>
+        
+        <div class="form-card">
+            <h1>🔨 سجل كحرفي</h1>
+            <p>انضم لأكبر شبكة حرفيين في الجزائر</p>
+            
+            <form id="registerForm">
+                <div class="form-group">
+                    <label>الاسم الكامل *</label>
+                    <input type="text" required placeholder="مثلاً: أحمد بن علي">
+                </div>
+                
+                <div class="form-group">
+                    <label>رقم الهاتف *</label>
+                    <input type="tel" required placeholder="0550 00 00 00">
+                </div>
+                
+                <div class="form-group">
+                    <label>البريد الإلكتروني</label>
+                    <input type="email" placeholder="example@email.com">
+                </div>
+                
+                <div class="form-group">
+                    <label>الولاية *</label>
+                    <select required>
+                        <option value="">اختر الولاية</option>
+                        <option>الجزائر</option>
+                        <option>وهران</option>
+                        <option>قسنطينة</option>
+                        <option>عنابة</option>
+                        <option>بجاية</option>
+                        <option>تلمسان</option>
+                        <option>سطيف</option>
+                        <option>غيرها...</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>التخصص *</label>
+                    <select required>
+                        <option value="">اختر التخصص</option>
+                        <option>سباكة</option>
+                        <option>كهرباء</option>
+                        <option>نجارة</option>
+                        <option>حدادة</option>
+                        <option>دهان</option>
+                        <option>تكييف</option>
+                        <option>نحاس تقليدي</option>
+                        <option>زرابي</option>
+                        <option>فخار</option>
+                        <option>غيرها...</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>سنوات الخبرة *</label>
+                    <input type="number" required placeholder="مثلاً: 5">
+                </div>
+                
+                <div class="form-group">
+                    <label>وصف مختصر لخدماتك</label>
+                    <textarea rows="3" placeholder="اكتب نبذة عن خدماتك ومهاراتك..."></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">سجل الآن</button>
+                
+                <div class="success-message" id="successMsg">
+                    ✅ تم التسجيل بنجاح! سنتواصل معك قريباً.
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('successMsg').style.display = 'block';
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
