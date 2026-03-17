@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحرفيون - حِرفتي</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f9fafb;
+        }
+        .header {
+            background: #d97706;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .back-btn {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .search-box {
+            max-width: 500px;
+            margin: -25px auto 30px;
+            padding: 0 20px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .craftsman-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .craftsman-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #fbbf24;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-left: 15px;
+        }
+        .craftsman-info h3 {
+            color: #1f2937;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .craftsman-info p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+        .rating {
+            color: #fbbf24;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        .tag {
+            background: #fef3c7;
+            color: #d97706;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+        .contact-btn {
+            width: 100%;
+            padding: 12px;
+            background: #d97706;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .location {
+            color: #6b7280;
+            font-size: 13px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-btn">← رجوع</a>
+        <h1>الحرفيون المتاحون</h1>
+    </div>
+    
+    <div class="search-box">
+        <input type="text" class="search-input" placeholder="ابحث عن حرفي (سباكة، كهرباء، نجارة...)">
+    </div>
+    
+    <div class="container">
+        <!-- حرفي 1 -->
+        <div class="craftsman-card">
+            <div class="craftsman-header">
+                <div class="avatar">🔧</div>
+                <div class="craftsman-info">
+                    <h3>أحمد بن علي</h3>
+                    <p>سباك محترف</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (48 تقييم)</div>
+                </div>
+            </div>
+            <div class="tags">
+                <span class="tag">سباكة عامة</span>
+                <span class="tag">صيانة فورية</span>
+                <span class="tag">24/7</span>
+            </div>
+            <p class="location">📍 الجزائر العاصمة - باب الواد</p>
+            <button class="contact-btn" onclick="alert('سيتم التواصل قريباً!')">اتصل الآن</button>
+        </div>
+        
+        <!-- حرفي 2 -->
+        <div class="craftsman-card">
+            <div class="craftsman-header">
+                <div class="avatar">⚡</div>
+                <div class="craftsman-info">
+                    <h3>محمد كريم</h3>
+                    <p>كهربائي معتمد</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (35 تقييم)</div>
+                </div>
+            </div>
+            <div class="tags">
+                <span class="tag">كهرباء منزلية</span>
+                <span class="tag">توصيلات</span>
+                <span class="tag">معتمد</span>
+            </div>
+            <p class="location">📍 وهران - حي السلام</p>
+            <button class="contact-btn" onclick="alert('سيتم التواصل قريباً!')">اتصل الآن</button>
+        </div>
+        
+        <!-- حرفي 3 -->
+        <div class="craftsman-card">
+            <div class="craftsman-header">
+                <div class="avatar">🪵</div>
+                <div class="craftsman-info">
+                    <h3>رشيد عبدالله</h3>
+                    <p>نجار فنان</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (52 تقييم)</div>
+                </div>
+            </div>
+            <div class="tags">
+                <span class="tag">نجارة تقليدية</span>
+                <span class="tag">ديكور</span>
+                <span class="tag">أثاث مخصص</span>
+            </div>
+            <p class="location">📍 قسنطينة - وسط المدينة</p>
+            <button class="contact-btn" onclick="alert('سيتم التواصل قريباً!')">اتصل الآن</button>
+        </div>
+        
+        <!-- حرفي 4 -->
+        <div class="craftsman-card">
+            <div class="craftsman-header">
+                <div class="avatar">🎨</div>
+                <div class="craftsman-info">
+                    <h3>فاطمة الزهراء</h3>
+                    <p>حرفية نحاس</p>
+                    <div class="rating">⭐⭐⭐⭐⭐ (29 تقييم)</div>
+                </div>
+            </div>
+            <div class="tags">
+                <span class="tag">نحاس تقليدي</span>
+                <span class="tag">حرف يدوية</span>
+                <span class="tag">تصميم مخصص</span>
+            </div>
+            <p class="location">📍 تلمسان - المدينة القديمة</p>
+            <button class="contact-btn" onclick="alert('سيتم التواصل قريباً!')">اتصل الآن</button>
+        </div>
+    </div>
+</body>
+</html>
